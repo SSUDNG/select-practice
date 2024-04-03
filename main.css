@@ -9,9 +9,6 @@ body {
   margin-top: 1500px;
   position: relative;
 }
-.wrap.up {
-  flex-direction: column-reverse;
-}
 .selectBox {
   border: 1px solid black;
   width: 100%;
