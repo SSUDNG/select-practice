@@ -35,7 +35,6 @@ function resize() {
   const windowHeight = window.innerHeight;
   const rect = selectBox.getBoundingClientRect();
   const selectBoxY = rect.bottom + options.clientHeight;
-  console.log(selectBoxY, windowHeight);
 
   if (selectBoxY > windowHeight) {
     wrap.classList.add("up");
