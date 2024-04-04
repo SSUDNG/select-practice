@@ -20,6 +20,12 @@ body.addEventListener("click", (event) => {
 option.forEach((selected) => {
   selected.addEventListener("click", (event) => {
     selectedDisplay.textContent = event.target.textContent;
+    event.target.classList.add("selected");
+    option.forEach((other) => {
+      if (other !== selected) {
+        other.classList.remove("selected");
+      }
+    });
     selectBox.classList.remove("open");
     options.classList.remove("open");
   });
