@@ -9,9 +9,7 @@ let isOpen = false;
 selectBox.addEventListener("click", () => {
   selectBox.classList.toggle("open");
   isOpen = !isOpen; // isOpen 값을 toggle 합니다.
-  if (isOpen) {
-    resize(); // isOpen이 true일 경우에만 resize 함수 실행
-  }
+  isOpen && resize();
 });
 
 body.addEventListener("click", (event) => {
@@ -48,12 +46,8 @@ function resize() {
 }
 
 window.addEventListener("resize", () => {
-  if (isOpen) {
-    resize();
-  }
+  isOpen && resize();
 });
 window.addEventListener("scroll", () => {
-  if (isOpen) {
-    resize();
-  }
+  isOpen && resize();
 });
