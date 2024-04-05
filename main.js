@@ -9,7 +9,7 @@ let isOpen = false;
 selectBox.addEventListener("click", () => {
   selectBox.classList.toggle("open");
   isOpen = !isOpen; // isOpen 값을 toggle 합니다.
-  isOpen && resize();
+  isOpen && flip();
 });
 
 body.addEventListener("click", (event) => {
@@ -33,11 +33,11 @@ option.forEach((selected) => {
   });
 });
 
-function resize() {
+function flip() {
   const windowHeight = window.innerHeight;
   const rect = selectBox.getBoundingClientRect();
   const selectBoxY = rect.bottom + options.clientHeight;
-  console.log(resize);
+  console.log("flip 실행 중");
   if (selectBoxY > windowHeight) {
     wrap.classList.add("up");
   } else {
@@ -45,9 +45,9 @@ function resize() {
   }
 }
 
-window.addEventListener("resize", () => {
-  isOpen && resize();
+window.addEventListener("flip", () => {
+  isOpen && flip();
 });
 window.addEventListener("scroll", () => {
-  isOpen && resize();
+  isOpen && flip();
 });
