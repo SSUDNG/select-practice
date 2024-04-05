@@ -63,7 +63,7 @@ h1 {
   display: none;
   box-sizing: border-box;
 }
-.options.open {
+.selectBox.open + .options {
   display: block;
 }
 .options .option {

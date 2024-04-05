@@ -7,14 +7,12 @@ const option = document.querySelectorAll(".option");
 
 selectBox.addEventListener("click", () => {
   selectBox.classList.toggle("open");
-  options.classList.toggle("open");
   resize();
 });
 
 body.addEventListener("click", (event) => {
   if (!event.target.closest(".wrap")) {
     selectBox.classList.remove("open");
-    options.classList.remove("open");
   }
 });
 option.forEach((selected) => {
@@ -27,7 +25,6 @@ option.forEach((selected) => {
       }
     });
     selectBox.classList.remove("open");
-    options.classList.remove("open");
   });
 });
 
